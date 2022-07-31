@@ -24,7 +24,7 @@ pipeline {
                     def isPrInMain = env.CHANGE_TARGET == "master"
                     def isCurrentBranchMain = env.BRANCH_NAME == "master"
                     def currentBranchName = env.BRANCH_NAME
-                    def urlTomcatManager = "http://${TOMCAT_ACCESS_CRED}@f9a4-188-243-140-96.eu.ngrok.io/manager/text"
+                    def urlTomcatManager = "http://${TOMCAT_ACCESS_CRED}@10.0.2.255/manager/text"
 
                     if (isPrInMain && isPr){
                         echo 'Pr to main'
