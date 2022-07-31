@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+                TOMCAT_ACCESS_CRED = credentials('jenkins-tomcat-war-deploy')
+            }
     tools {
         maven 'maven'
     }
@@ -21,7 +24,7 @@ stage('Deploy') {
                     def isPrInMain = env.CHANGE_TARGET == "master"
                     def isCurrentBranchMain = env.BRANCH_NAME == "master"
                     def currentBranchName = env.BRANCH_NAME
-                    def urlTomcatManager = "http://10.0.2.15:8085/manager/text"
+                    def urlTomcatManager = "http://${TOMCAT_ACCESS_CRED}@10.0.2.15:8085/manager/text"
 
                     if (isPrInMain && isPr){
                         echo 'Pr to main'
