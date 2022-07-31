@@ -19,6 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+            echo 'deploy stage'
                 script{
                     def isPr = env.CHANGE_ID != null
                     def isPrInMain = env.CHANGE_TARGET == "master"
