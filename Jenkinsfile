@@ -1,10 +1,7 @@
 pipeline {
     agent any
-    environment {
-            TOMCAT_ACCESS_CRED = credentials('jenkins-tomcat-war-deploy')
-        }
     tools {
-        maven 'maven-3.8.4'
+        maven 'maven'
     }
     stages {
         stage('Build') {

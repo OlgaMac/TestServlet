@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34a031e2-e6fa-4dde-98c6-ad12f4da9b05" name="Changes" comment="HelloServlet">
-      <change afterPath="$PROJECT_DIR$/jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="34a031e2-e6fa-4dde-98c6-ad12f4da9b05" name="Changes" comment="jenkinsfile">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +50,10 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Файлы с Windows/IdeaProjects/SEVRELETS/atm-service",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager">
@@ -155,7 +154,8 @@
       <option name="presentableId" value="Default" />
       <updated>1659190458159</updated>
       <workItem from="1659190460881" duration="4495000" />
-      <workItem from="1659195055773" duration="1956000" />
+      <workItem from="1659195055773" duration="2797000" />
+      <workItem from="1659263063208" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="HelloServlet">
       <created>1659194825673</created>
@@ -171,7 +171,35 @@
       <option name="project" value="LOCAL" />
       <updated>1659195001983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="jenkinsfile">
+      <created>1659216327119</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659216327119</updated>
+    </task>
+    <task id="LOCAL-00004" summary="jenkinsfile">
+      <created>1659266012762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659266012762</updated>
+    </task>
+    <task id="LOCAL-00005" summary="jenkinsfile">
+      <created>1659266178415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659266178415</updated>
+    </task>
+    <task id="LOCAL-00006" summary="jenkinsfile">
+      <created>1659266372785</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659266372785</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +218,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HelloServlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="HelloServlet" />
+    <MESSAGE value="jenkinsfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="jenkinsfile" />
   </component>
 </project>
