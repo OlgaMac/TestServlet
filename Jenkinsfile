@@ -11,7 +11,7 @@ pipeline {
             }
         stage('Checkstyle') {
             steps {
-                recordIssues(healthy: 1,
+                recordIssues(healthy: 0,
                         tools: [checkStyle(reportEncoding: 'UTF-8')])
                 sh "mvn checkstyle:check"
             }
