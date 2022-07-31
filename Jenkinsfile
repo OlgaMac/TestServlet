@@ -9,13 +9,6 @@ pipeline {
                 sh 'mvn package'
                 }
             }
-        stage('Checkstyle') {
-            steps {
-                recordIssues(healthy: 0,
-                        tools: [checkStyle(reportEncoding: 'UTF-8')])
-                sh "mvn checkstyle:check"
-            }
-        }
         stage('Test') {
             steps {
                 echo 'testing stage'
