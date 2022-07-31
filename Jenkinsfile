@@ -17,14 +17,14 @@ pipeline {
                 echo 'testing stage'
             }
         }
-stage('Deploy') {
+        stage('Deploy') {
             steps {
                 script{
                     def isPr = env.CHANGE_ID != null
                     def isPrInMain = env.CHANGE_TARGET == "master"
                     def isCurrentBranchMain = env.BRANCH_NAME == "master"
                     def currentBranchName = env.BRANCH_NAME
-                    def urlTomcatManager = "http://${TOMCAT_ACCESS_CRED}@10.0.2.15:8085/manager/text"
+                    def urlTomcatManager = "http://${TOMCAT_ACCESS_CRED}@f9a4-188-243-140-96.eu.ngrok.io/manager/text"
 
                     if (isPrInMain && isPr){
                         echo 'Pr to main'
