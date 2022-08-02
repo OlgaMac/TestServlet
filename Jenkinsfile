@@ -33,14 +33,14 @@ pipeline {
 
         stage('Login') {
                   steps {
-                     sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+                     sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW docker.io'
                 }
              }
 
         stage('Push') {
 
        			steps {
-       				sh 'docker push olja555/testservlet:latest'
+       				sh 'docker push testservlet:latest'
        			}
        		}
       }
