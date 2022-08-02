@@ -27,7 +27,7 @@ pipeline {
        }
        stage('Deployment') {
                  steps {
-                    sh 'docker build -f Dockerfile -t testservlet/aston:latest .'
+                    sh 'docker build -f Dockerfile -t testservlet:latest .'
                 }
              }
 
@@ -40,7 +40,7 @@ pipeline {
         stage('Push') {
 
        			steps {
-       				sh 'docker push testservlet/aston:latest'
+       				sh 'docker push testservlet:latest'
        			}
        		}
       }
