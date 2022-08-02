@@ -4,4 +4,4 @@ ENV DB_USER tomcat
 ENV DB_PASSWORD s3cret
 EXPOSE 8085
 RUN rm -fr /usr/local/tomcat/webapps/TestServlet
-COPY target/webapp /usr/local/tomcat/webapps/TestServlet
+COPY target/TestServlet-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/TestServlet.war
