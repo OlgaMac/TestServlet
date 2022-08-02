@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a031e2-e6fa-4dde-98c6-ad12f4da9b05" name="Changes" comment="tomcat">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Файлы с Windows/IdeaProjects/SEVRELETS/client-service",
+    "last_opened_file_path": "C:/Users/oljam/IdeaProjects/TestServlet",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
@@ -63,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oljam\IdeaProjects\TestServlet" />
       <recent name="C:\Users\oljam\IdeaProjects\TestServlet\src\main" />
       <recent name="C:\Users\oljam\IdeaProjects\TestServlet\src\main\java" />
     </key>
@@ -167,6 +169,7 @@
       <workItem from="1659190460881" duration="4495000" />
       <workItem from="1659195055773" duration="2797000" />
       <workItem from="1659263063208" duration="8209000" />
+      <workItem from="1659386999446" duration="1381000" />
     </task>
     <task id="LOCAL-00001" summary="HelloServlet">
       <created>1659194825673</created>
@@ -315,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659289440896</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="tomcat">
+      <created>1659306587099</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1659306587099</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
