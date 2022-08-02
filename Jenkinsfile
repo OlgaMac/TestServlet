@@ -40,7 +40,7 @@ pipeline {
         stage('Push') {
 
        			steps {
-       				sh 'docker push testservlet:latest'
+       				sh 'docker push olja555/testservlet:latest'
        			}
        		}
       }
