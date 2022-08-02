@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script{
-                    def isPr = env.CHANGE_ID != null
+                 def isPr = env.CHANGE_ID != null
                     def isPrInMain = env.CHANGE_TARGET == "master"
                     def isCurrentBranchMain = env.BRANCH_NAME == "master"
                     def currentBranchName = env.BRANCH_NAME
@@ -53,7 +53,7 @@ def getPrNumberFromPreviousCommit() {
     }
 }
 def deployWar(def urlTomcatManager) {
-    def deploy = sh (script: "curl -s --upload-file **/.war '${urlTomcatManager}/deploy?path=/TestServlet&update=true'")
+    def deploy = sh (script: "curl -s --upload-file **/*.war '${urlTomcatManager}/deploy?path=/TestServlet&update=true'")
 }
 def deployWar(def urlTomcatManager, def currentBranchName) {
     def deploy = sh (script: "curl -s --upload-file **/TestServlet-1.0-SNAPSHOT.war '${urlTomcatManager}/deploy?path=/TestServlet/${currentBranchName}&update=true'")
