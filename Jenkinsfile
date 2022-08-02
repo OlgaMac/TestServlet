@@ -27,7 +27,7 @@ pipeline {
        }
        stage('Deployment') {
                  steps {
-                    sh 'docker build -f Dockerfile -t testservlet:latest .'
+                    sh 'docker build -f Dockerfile -t olja555/testservlet:latest .'
                 }
              }
 
@@ -40,7 +40,7 @@ pipeline {
         stage('Push') {
 
        			steps {
-       				sh 'docker push testservlet:latest'
+       				sh 'docker push olja555/testservlet:latest'
        			}
        		}
       }
