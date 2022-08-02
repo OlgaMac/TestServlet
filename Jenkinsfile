@@ -43,31 +43,30 @@ pipeline {
                 }
             }
         }
-    }
-    stage('Deployment') {
+        stage('Deployment') {
                  steps {
                     sh 'docker build -f Dockerfile -t testservlet/aston:latest .'
                 }
              }
 
-             stage('Login') {
+        stage('Login') {
                   steps {
                      sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
                 }
              }
 
-             stage('Push') {
+        stage('Push') {
 
        			steps {
        				sh 'docker push testservlet/aston:latest'
        			}
        		}
        	}
-            post {
+        post {
             	always {
             		sh 'docker logout'
             	}
-            }
+        }
 }
 def getPrNumberFromPreviousCommit() {
     def commitBody = sh (script: 'git log --format=%B -1', returnStdout:true)
