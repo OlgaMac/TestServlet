@@ -37,12 +37,12 @@ pipeline {
                        deployWar(urlTomcatManager)
                            if (prNumber != null) {
                                undeployWar(urlTomcatManager, prNumber)
-                          }
+                         }
                    }
                }
            }
        }
-
+    }
  }
  def getPrNumberFromPreviousCommit() {
      def commitBody = sh (script: 'git log --format=%B -1', returnStdout:true)
@@ -51,6 +51,7 @@ pipeline {
          def prNumber = (commitBody =~ /See merge request .+!\d+/)[0].split('!').last()
          return prNumber
      }
+ }
  def deployWar(def urlTomcatManager) {
      def deploy = sh (script: "curl -s --upload-file **/*.war '${TOMCAT_ACCESS_CRED}@192.168.3.29:8085/manager/text/deploy?path=/TestServlet&update=true'")
  }
