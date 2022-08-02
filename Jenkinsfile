@@ -53,11 +53,11 @@ pipeline {
      }
  }
  def deployWar(def urlTomcatManager) {
-     def deploy = sh (script: "curl -s --upload-file **/*.war '${TOMCAT_ACCESS_CRED}@192.168.3.29:8080/manager/text/deploy?path=/TestServlet&update=true'")
+     def deploy = sh (script: "curl -s --upload-file **/*.war '${TOMCAT_ACCESS_CRED}@192.168.3.29:8085/manager/text/deploy?path=/TestServlet&update=true'")
  }
  def deployWar(def urlTomcatManager, def currentBranchName) {
-     def deploy = sh (script: "curl -s --upload-file **/TestServlet-1.0-SNAPSHOT.war '$${TOMCAT_ACCESS_CRED}@192.168.3.29:8080/manager/text/deploy?path=/TestServlet/${currentBranchName}&update=true'")
+     def deploy = sh (script: "curl -s --upload-file **/TestServlet-1.0-SNAPSHOT.war '${TOMCAT_ACCESS_CRED}@192.168.3.29:8085/manager/text/deploy?path=/TestServlet/${currentBranchName}&update=true'")
  }
  def undeployWar(def urlTomcatManager, def prNumber) {
-     def undeploy = sh (script: "curl  '$${TOMCAT_ACCESS_CRED}@192.168.3.29:8080/manager/text/undeploy?path=/TestServlet/MR-${prNumber}'")
+     def undeploy = sh (script: "curl  '${TOMCAT_ACCESS_CRED}@192.168.3.29:8085/manager/text/undeploy?path=/TestServlet/MR-${prNumber}'")
  }
