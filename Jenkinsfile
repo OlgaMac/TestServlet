@@ -38,7 +38,7 @@ pipeline {
                         deployWar(urlTomcatManager)
                             if (prNumber != null) {
                                 undeployWar(urlTomcatManager, prNumber)
-                            }
+                           }
                     }
                 }
             }
