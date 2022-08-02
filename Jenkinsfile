@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
                 TOMCAT_ACCESS_CRED = credentials('jenkins-tomcat-war-deploy')
+                DOCKERHUB_CREDENTIALS=credentials('docker-registry-credentials')
             }
     tools {
         maven 'maven'
@@ -43,6 +44,30 @@ pipeline {
             }
         }
     }
+    stage('Deployment') {
+                 steps {
+                    sh 'docker build -f Dockerfile -t testservlet:latest .'
+                }
+             }
+
+             stage('Login') {
+                  steps {
+                     sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+                }
+             }
+
+             stage('Push') {
+
+       			steps {
+       				sh 'docker push testservlet:latest'
+       			}
+       		}
+       	}
+            post {
+            	always {
+            		sh 'docker logout'
+            	}
+            }
 }
 def getPrNumberFromPreviousCommit() {
     def commitBody = sh (script: 'git log --format=%B -1', returnStdout:true)
